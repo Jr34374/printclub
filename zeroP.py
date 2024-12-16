@@ -17,15 +17,19 @@ while(True):
     #photo_name = 'example'
 #以上
 
-#写真を撮影
-
-photo_1 = ''
+#写真を撮影↓
+photo_1 = ''#写真を保存した際のファイル名を取得
 #以上
 
 client(photo_1)#撮影した写真を送信
-
 photo_1 = server()#受け取り待機
 
-#編集
+#編集↓
+photo_1 = '' #編集後のファイル名を取得
+#以上
 
+client(photo_1) #送信
+photo_1 = server()#受け取り待機
+
+#表示
 #以上
