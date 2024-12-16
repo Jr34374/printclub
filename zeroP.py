@@ -21,15 +21,15 @@ while(True):
 photo_1 = ''#写真を保存した際のファイル名を取得
 #以上
 
-client(photo_1)#撮影した写真を送信
-photo_1 = server()#受け取り待機
+client_pic(photo_1)#撮影した写真を送信
+photo_1 = server_pic()#受け取り待機
 
 #編集↓
 photo_1 = '' #編集後のファイル名を取得
 #以上
 
-client(photo_1) #送信
-photo_1 = server()#受け取り待機
+client_pic(photo_1) #送信
+photo_1 = server_pic()#受け取り待機
 
 #表示
 

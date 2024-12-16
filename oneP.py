@@ -9,7 +9,7 @@ while(True):
     if(n_ch == 'Ready'):
         break
 
-ex_pic_name = server()#写真の受け取り
+ex_pic_name = server_pic()#写真の受け取り
 
 #受け取った写真を表示↓
 
@@ -20,13 +20,13 @@ ex_pic_name = server()#写真の受け取り
 
 photo_2 = ''#合成後の写真のファイル名を取得
 
-client(photo_2)#合成後の写真を送信
+client_pic(photo_2)#合成後の写真を送信
 
-photo_2 = server()#受け取り待機
+photo_2 = server_pic()#受け取り待機
 
 #編集
 photo_2 = ''#編集後の写真のファイル名を取得
 
-client(photo_2)#送信
+client_pic(photo_2)#送信
 
 #表示

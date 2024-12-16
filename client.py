@@ -1,7 +1,7 @@
 import socket
 import os
 
-def client(current_path):#引数は画像のファイル名example.jpg
+def client_pic(current_path):#引数は画像のファイル名example.jpg
     # サーバーPCのIPアドレスとポート イーサネット アダプター イーサーネット:ipv4
     HOST = '169.254.78.149'    # 接続したHOSTのIPアドレス
 
