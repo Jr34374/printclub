@@ -1,6 +1,20 @@
 import socket
 import os
 
+def client_check(req):
+    HOST = '169.254.78.149'    # 接続したHOSTのIPアドレス
+
+    PORT = 9000
+    
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((HOST, PORT))
+    
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    sock.send(req.encode("UTF-8"))
+    msg = sock.recv(1024)
+    print(msg.decode('utf-8'))
+
+
 def client_pic(current_path):#引数は画像のファイル名example.jpg
     # サーバーPCのIPアドレスとポート イーサネット アダプター イーサーネット:ipv4
     HOST = '169.254.78.149'    # 接続したHOSTのIPアドレス

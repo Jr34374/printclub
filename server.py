@@ -2,6 +2,35 @@ import socket
 import os
 import getip
 
+def server_check():#通信確認用
+    #socketのセットアップ
+    current_ip = getip.getipv4()
+
+    HOST = current_ip  # サーバーPCのIPアドレス
+    PORT = 9000        # 使用するポート番号
+    
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    
+    sock.bind((HOST, PORT))
+    sock.listen(1)
+    
+    while(True):
+        
+        conn, address = sock.accept
+        try:
+            #リクエスト内容を取得
+            req = conn.recv(1024).decode()
+            print(f"Connection: {address}")
+            print(f"Request: {req}")
+            
+            #レスポンス
+            conn.send(bytes(f"response {address}", 'utf-8'))
+        except:
+            print("Error")
+        finally:
+            conn.close()
+
+
 def server_pic():#returnに写真のファイル名(Path用)
     # サーバーPCのIPアドレスとポート イーサネット アダプター イーサーネット:ipv4
     current_ip = getip.getipv4()
