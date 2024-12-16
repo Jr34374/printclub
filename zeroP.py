@@ -32,4 +32,5 @@ client(photo_1) #送信
 photo_1 = server()#受け取り待機
 
 #表示
+
 #以上
