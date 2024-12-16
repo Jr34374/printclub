@@ -2,7 +2,7 @@ import socket
 import os
 import getip
 
-def server():#returnに写真のファイル名(Path用)
+def server_pic():#returnに写真のファイル名(Path用)
     # サーバーPCのIPアドレスとポート イーサネット アダプター イーサーネット:ipv4
     current_ip = getip.getipv4()
 
