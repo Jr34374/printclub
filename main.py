@@ -20,3 +20,4 @@ if (sys_type == 0): #0P
 elif(sys_type == 1):
     print('1P')
     
+    
