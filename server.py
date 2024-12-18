@@ -1,10 +1,10 @@
 import socket
 import os
-import getip
+import getAddress
 
 def server_check():#通信確認用
     #socketのセットアップ
-    current_ip = getip.getipv4()
+    current_ip = getAddress.getipv4()
 
     HOST = current_ip  # サーバーPCのIPアドレス
     PORT = 9000        # 使用するポート番号
@@ -33,7 +33,7 @@ def server_check():#通信確認用
 
 def server_pic():#returnに写真のファイル名(Path用)
     # サーバーPCのIPアドレスとポート イーサネット アダプター イーサーネット:ipv4
-    current_ip = getip.getipv4()
+    current_ip = getAddress.getipv4()
 
     HOST = current_ip  # サーバーPCのIPアドレス
     PORT = 9000        # 使用するポート番号
