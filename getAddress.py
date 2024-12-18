@@ -2,9 +2,6 @@ import netifaces as ni
 import psutil
 import os
 import socket
-import nmap
-
-
 
 def get_ip_server() -> list:
     if os.name == "nt":
