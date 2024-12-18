@@ -25,7 +25,6 @@ def get_ip_server() -> list:
 
 # 配列の一番目の要素を取得
 def getipv4():
-    print(get_ip_server())
     ip_list = get_ip_server()
     
     if ip_list:  # リストが空でないかチェック
@@ -35,5 +34,10 @@ def getipv4():
     else:
         print("IPアドレスが見つかりませんでした")
         
-
 #getipv4()
+
+ip_address = getipv4()
+
+if __name__ == '__main__':
+    print(get_ip_server())
+    print(f"最初のIPアドレス:{ip_address}")
