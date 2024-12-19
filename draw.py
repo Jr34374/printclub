@@ -10,6 +10,9 @@ from collections import Counter
 from collections import deque
 from PIL import ImageFont, ImageDraw, Image
 
+import os
+os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
+
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
